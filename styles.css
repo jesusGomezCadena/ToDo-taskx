@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+
+      background: linear-gradient(
+                    to bottom,
+                    #32053d,
+                    #05193d);
+
+    font-family: "Quicksand", sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90vw;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+h1{
+    font-weight: 900;
+    color: white;
+    font-size: 68px;
+}
+
+.contenedor-input{
+    background-color: white;
+    padding: 2px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    width: clamp(200px, 90%, 600px);
+}
+
+input{
+    border: none;
+    border-radius: 15px;
+    height: 2.5rem;
+
+    font-size: 1.2rem;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+
+    flex-grow: 1;
+
+}
+
+input::placeholder{
+    font-weight: 100;
+    color: #a0a0a0;
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    border: none;
+    border-radius: 15px;
+    background-color: #32053d;
+    color: white;
+    font-weight: 700;
+
+}
+
+.contenedor-tasks{
+    background-color: whitesmoke;
+    border-radius: 60px 0px 60px 0px ;
+}
+
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 1.5rem;
+    font-weight: 800;
+    list-style: none;
+    text-align: center;
+    width: 100vw;
+    height: 50%;
+}
+
+
+li{
+    position: relative;
+    padding: 20px 30px;
+    background-color: white;
+    border-radius: 20px;
+    width: clamp(350px, 90%, 800px);
+    user-select: none;
+}
+
+
+ul li.checked{
+    background-color: #95B861;
+    color: white;
+    text-decoration: line-through;
+}
+
+span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #555;
+    text-align: center;
+    line-height: 40px; /* centra verticalmente el símbolo × */
+    cursor: pointer;
+    user-select: none;
+
+}
+
+span:hover{
+    background-color: rgb(255 255 255 / 0.3);
+}
+
